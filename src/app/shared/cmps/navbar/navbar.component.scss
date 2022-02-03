@@ -1,0 +1,120 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+
+    &-logo {
+        max-width: 130px;
+        position: absolute;
+        top: 1em;
+    }
+
+    .nav {
+        position: fixed;
+        background: var(--clr-dark);
+        color: var(--clr-light);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: transform 0.25s ease-in-out;
+
+        &-list {
+            list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: left;
+            margin: 4em 0.5em;
+            padding: 0;
+        }
+
+        &-link {
+            color: inherit;
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-h3);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--clr-accent);
+            }
+        }
+
+        &-img {
+            height: 20px;
+            position: absolute;
+            top: 75%;
+            left: 7%;
+        }
+
+        &-toggle {
+            padding: 0.5em;
+            background: transparent;
+            border: 0;
+            position: absolute;
+            right: 3em;
+            top: 1em;
+            z-index: 1001;
+
+            .hamburger {
+                display: block;
+                position: sticky;
+                &,
+                &::before,
+                &::after {
+                    width: 2em;
+                    height: 4px;
+                    border-radius: 1em;
+                    background: var(--clr-accent);
+                    transition: transform 0.25s ease-in-out;
+                }
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+
+                &::before {
+                    top: 6px;
+                }
+                &::after {
+                    bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+.nav-open {
+    .nav {
+        transform: translateX(80%);
+        &-toggle {
+            position: fixed;
+        }
+        
+        @media(max-width: 600px){
+            transform: translateX(50%);
+
+            &-img{
+                height: 15px;
+                top: 60%;
+                left:1em;
+            }
+        }
+    }
+
+    .hamburger {
+        transform: rotate(0.625turn);
+        &::before {
+            transform: rotate(90deg) translateX(-6px);
+        }
+        &::after {
+            opacity: 0;
+        }
+    }
+}

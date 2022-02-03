@@ -1,0 +1,18 @@
+<section class="intro">
+    <h1 class="intro-title title">
+        My <strong>Work Portfolio</strong>
+    </h1>
+    <p class="intro-subtitle subtitle">
+        here you can meet some of my projects
+    </p>
+    <img src="/assets/images/projects.jpg" class="intro-img">
+</section>
+    <div class="projects-container">
+        <div class="project" *ngFor="let proj of projects">
+            <h2 class='project-title'>{{proj.name}}</h2>
+            <a href="{{proj.link}}" target="_blank" class="project-link"><img src="{{proj.imgUrl}}" class="project-img"></a>
+            <p class="project-description">{{proj.description}}</p>
+        </div>
+    </div>
+
+

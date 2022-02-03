@@ -1,0 +1,191 @@
+.main {
+    .intro,
+    .about {
+        &-subtitle {
+            background: var(--clr-fix);
+            font-family: var(--ff-secondary);
+            margin-bottom: 1em;
+            padding: 0.25em 1.5em;
+        }
+    }
+
+    .intro {
+        position: relative;
+
+        &-title {
+            font-weight: var(--fw-reg);
+            strong {
+                display: block;
+            }
+        }
+        &-subtitle {
+            display: inline-block;
+            padding-right: 1em;
+            font-weight: var(--fw-bold);
+        }
+        &-img {
+            box-shadow: var(--bs);
+        }
+
+        @media (min-width: 600px) {
+            display: grid;
+            width: min-content;
+            margin: 0 auto;
+            grid-template-areas: "img title" "img subtitle";
+            grid-template-columns: min-content max-content;
+            grid-column-gap: 1em;
+
+            &-img {
+                grid-area: img;
+                min-width: 250px;
+                z-index: 2;
+            }
+
+            .subtitle {
+                align-self: start;
+                grid-column: -1/1;
+                grid-row: 2;
+                text-align: right;
+                position: relative;
+                left: -1.5em;
+                width: calc(100% + 1.5em);
+            }
+        }
+    }
+
+    .skills {
+        background: var(--clr-blend);
+        background-image: url(/assets/images/background.svg);
+        background-size: cover;
+        background-blend-mode: multiply;
+        color: var(--clr-light);
+        text-align: center;
+
+        &-title {
+            color: var(--clr-light);
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 2em;
+                height: 1px;
+                margin: 0.25em auto 1em;
+                background: var(--clr-light);
+                opacity: 0.2;
+            }
+        }
+
+        &-container {
+            margin-bottom: 4em;
+
+            .skill {
+                h3 {
+                    margin-bottom: 10px;
+                    font-size: 28px;
+                }
+                p {
+                    // max-width: 500px;
+                }
+            }
+        }
+        @media (min-width: 800px) {
+            max-width: 1000px;
+            margin: 0 auto;
+
+            &-container {
+                display: flex;
+
+                .skill {
+                    margin-right: auto;
+                    margin-left: auto;
+                    max-width: 500px;
+            p{
+                // width: 400ch;
+            }
+                }
+            }
+        }
+    }
+
+    .about {
+        max-width: 1000px;
+        margin: auto;
+
+        &-img {
+            box-shadow: var(--bs);
+        }
+
+        @media (min-width: 600px) {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            grid-template-areas:
+                "title img"
+                "subtitle img"
+                "text img";
+            grid-column-gap: 2em;
+
+            &-title {
+                grid-area: title;
+            }
+
+            &-subtitle {
+                grid-column: 1/-1;
+                grid-row: 2;
+                position: relative;
+                left: -1em;
+                width: calc(100% + 2em);
+                padding-left: 1em;
+                padding-right: calc(200px + 4em);
+            }
+
+            &-img {
+                grid-area: img;
+                position: relative;
+            }
+        }
+    }
+
+    .projects {
+        background: var(--clr-dark);
+        color: var(--clr-light);
+        max-width: 1000px;
+        margin: 0 auto;
+
+        &-subtitle {
+            color: var(--clr-accent);
+            font-weight: var(--fw-bold);
+            margin-bottom: 2em;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 12px;
+            &-item {
+                background: var(--clr-accent);
+                overflow: hidden;
+                &-title {
+                    background: var(--clr-dark);
+                    color: var(--clr-light);
+                    text-decoration: none;
+                }
+
+                &-img {
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.75s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.25s linear;
+                    &:hover {
+                        transform: scale(1.2);
+                        opacity: 0.95;
+                    }
+                }
+            }
+
+            @media(max-width: 800px){
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            }
+        }
+    }
+}
