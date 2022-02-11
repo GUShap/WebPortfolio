@@ -10,8 +10,12 @@
     <div class="projects-container">
         <div class="project" *ngFor="let proj of projects">
             <h2 class='project-title'>{{proj.name}}</h2>
-            <a href="{{proj.link}}" target="_blank" class="project-link"><img src="{{proj.imgUrl}}" class="project-img"></a>
+            <img src="{{proj.imgUrl}}" class="project-img">
             <p class="project-description">{{proj.description}}</p>
+            <a href="{{proj.pageLink}}" target="_blank" class="project-link">
+            <h4>See App</h4></a>
+            <a href="{{proj.codeLink}}" target="_blank" class="project-link">
+            <h4>See Code</h4></a>
         </div>
     </div>
 

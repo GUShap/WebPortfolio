@@ -4,6 +4,7 @@ export class Project {
         public id: string | number,
         public imgUrl:string,
         public description: string,
-        public link:string
+        public pageLink:string,
+        public codeLink:string
     ) { }
 }

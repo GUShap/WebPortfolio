@@ -9,7 +9,9 @@ import { FooterComponent } from './shared/cmps/footer/footer.component';
 import { PortfolioComponent } from './pages/portfolio/prtfolio.component';
 import { HoverClassDirective } from './directives/hover-class.directive';
 import { ClickClassDirective } from './directives/click-class.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -24,6 +26,9 @@ import { ClickClassDirective } from './directives/click-class.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

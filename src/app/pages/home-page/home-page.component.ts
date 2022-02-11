@@ -10,7 +10,7 @@ import { ProjectService} from 'src/app/services/project-service.service';
 export class HomePageComponent implements OnInit {
 
 projects:Project[]
-
+emailAddress: 'shapira91@gmail.com'
   constructor(private projectService:ProjectService) { }
 
   ngOnInit(): void {
