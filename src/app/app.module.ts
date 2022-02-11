@@ -11,8 +11,6 @@ import { HoverClassDirective } from './directives/hover-class.directive';
 import { ClickClassDirective } from './directives/click-class.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatIconModule} from '@angular/material/icon'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +25,6 @@ import {MatIconModule} from '@angular/material/icon'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
     
   ],
   providers: [],

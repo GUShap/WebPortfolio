@@ -38,11 +38,19 @@
 
             p {
                 margin: 0;
+                width: 300px;
             }
 
+            i{
+                padding-right: 10px;
+            }
+
+            // &-item{
+            //     width: 380px;
+            // }
             @media (max-width: 600px) {
                 left: 2em;
-                top: 230px;
+                top: 185px;
             }
         }
 
@@ -216,9 +224,4 @@
             }
         }
     }
-}
-
-mat-icon {
-    transform: translate(0, 25%);
-    margin-right: 10px;
 }
