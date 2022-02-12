@@ -1,4 +1,4 @@
-@import '/src/app/shared/cmps/navbar/navbar.component.scss';
+@import "/src/app/shared/cmps/navbar/navbar.component.scss";
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap");
 
 *,
@@ -17,16 +17,15 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #82dda6;
-    --clr-blend:#00000050;
-    --clr-fix:#69c361da;
+    --clr-blend: #00000050;
+    --clr-fix: #69c361da;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.65), 
-          0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.65), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 
     @media (min-width: 800px) {
         --fs-h1: 4.5rem;
@@ -44,7 +43,7 @@ body {
     line-height: 1.6;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -75,10 +74,10 @@ strong {
     font-weight: var(--fw-bold);
 }
 
-:focus{
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
-}
+// :focus {
+//     outline: 3px solid var(--clr-accent);
+//     outline-offset: 3px;
+// }
 
 /*General*/
 
@@ -95,7 +94,7 @@ section {
     font-size: var(--fs-h3);
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 0.5em 2.5em;
     // background:rgba(169, 128, 182, 0.294);
@@ -106,14 +105,25 @@ section {
     // text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border: 2px solid;
 
-    &:hover{
+    &:hover {
         transform: scale(1.1);
     }
 }
 
+.pagination .ngx-pagination {
+    font-size: 30px;
+    margin-top: 20px;
+    .current {
+        display: none;
+    }
+    span {
+        display: none;
+    }
+}
 
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pagination {
+    transform: translate(41%);
+}

@@ -12,9 +12,10 @@
                 <i class="bi bi-envelope-fill"></i>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{emailAddress}}&su=Subject&body=Body%20Text"
                     target="_blank" class="footer-link">shapira91@gmail.com</a>
-                </p>
-                
-                <p class="communicatio-item"><i class="bi bi-telephone-fill"></i>+972526033388</p>
+            </p>
+
+            <p class="communicatio-item"><i class="bi bi-telephone-fill"></i><a
+                    href="tel:+972526033388">+972526033388</a></p>
         </div>
         <img src="./assets/images/profile.jpeg" class="intro-img">
     </section>
@@ -70,13 +71,14 @@
         <p class="projects-subtitle subtitle">view & enjoy!</p>
 
         <div class="portfolio">
-            <div class="portfolio-item" *ngFor="let proj of projects; index as i">
+            <div class="portfolio-item" *ngFor="let proj of projects | paginate: {itemsPerPage: 3, currentPage: p }">
                 <a href="portfolio" class="portfolio-item">
                     <h3 class="portfolio-item-title">{{proj.name}}</h3>
                     <img src="{{proj.imgUrl}}" class="portfolio-item-img">
                 </a>
             </div>
         </div>
-        
+        <pagination-controls class="pagination" (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+
     </section>
 </div>

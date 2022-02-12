@@ -10,6 +10,10 @@ import { PortfolioComponent } from './pages/portfolio/prtfolio.component';
 import { HoverClassDirective } from './directives/hover-class.directive';
 import { ClickClassDirective } from './directives/click-class.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
+
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxPaginationModule
     
   ],
   providers: [],

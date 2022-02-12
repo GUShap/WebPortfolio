@@ -50,7 +50,7 @@
             // }
             @media (max-width: 600px) {
                 left: 2em;
-                top: 185px;
+                top: 240px;
             }
         }
 
@@ -184,6 +184,7 @@
     }
 
     .projects {
+        box-sizing: border-box;
         background: var(--clr-dark);
         color: var(--clr-light);
         max-width: 1000px;
@@ -197,7 +198,8 @@
 
         .portfolio {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(1,245px );
             grid-gap: 12px;
             &-item {
                 background: var(--clr-accent);
@@ -220,7 +222,8 @@
             }
 
             @media (max-width: 800px) {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                transform: translate(30%);
+                grid-template-columns: repeat(1, 300px);
             }
         }
     }

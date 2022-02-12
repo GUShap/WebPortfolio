@@ -68,8 +68,9 @@
             font-weight: var(--fw-bold);
         }
 
-        h4 {
+        span {
             font-size: 17px;
+            width: auto;
             &:hover {
                 text-decoration: underline;
                 font-size: 18px;
